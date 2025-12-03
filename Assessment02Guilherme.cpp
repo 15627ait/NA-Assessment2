@@ -36,17 +36,16 @@ public:
             cout << "You have borrowed: " << name << endl;
         }
         else {
-            cout << "Book not available: " << name << endl;
+            cout << "Book is not available: " << name << endl;
         }
     }
 
     void returnCopy() {
         status = true;
-        cout << "Book returned: " << name << endl;
+        cout << "Book has been returned: " << name << endl;
     }
 };
 
-// Physical book subclass
 class ShelfBook : public BaseBook {
     string shelfCode;
 public:
@@ -60,7 +59,6 @@ public:
     }
 };
 
-// Digital book subclass
 class OnlineBook : public BaseBook {
     string licenseEnd;
 public:
@@ -108,7 +106,7 @@ int main() {
     // Add books
     app.addBook(new ShelfBook("Awaken The Giant Within", "Tony Robbins", "9781471108211", true, "2025-11-01", "S1"));
     app.addBook(new ShelfBook("Unlimited Power", "Tony Robbins", "9780684845777", true, "2025-11-01", "S2"));
-    app.addBook(new ShelfBook("Shoe Dog: A Memoir by the Creator of Nike", "Phil Knight", "9781471146725", true, "2025-11-01", "S3"));
+    app.addBook(new ShelfBook("Shoe Dog -  A Memoir by the Creator of Nike", "Phil Knight", "9781471146725", true, "2025-11-01", "S3"));
     app.addBook(new OnlineBook("Playing the Game: The History of Adidas", "Rainer Karlsch", "9783791378782", true, "2025-11-01", "2027-01-01"));
     app.addBook(new OnlineBook("1001 Albums You Must Hear Before You Die", "Robert Dimery", "9780789320742", true, "2025-11-01", "2028-12-31"));
 
